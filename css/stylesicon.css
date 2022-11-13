@@ -1,0 +1,54 @@
+
+.buttoicon {
+    position: relative;
+    display: inline-flex;
+    margin-top: 50px;
+    
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #885599;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ overflow: hidden;
+}
+.buttoicon::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: blue;
+    
+}
+.buttoicon:hover::after{
+    transform: translateY(-50px);
+}
+.buttoicon::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    bottom: -25px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    
+    background-color: orangered;
+    transform: translate;
+
+}
+.buttoicon:hover::before {
+    top: 10px;
+  
+}
+
+.buttoicon:hover,
+.buttoicon:focus {
+  background-color: #446699;
+  color: blanchedalmond;
+}
+
